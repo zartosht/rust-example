@@ -10,6 +10,10 @@ async fn main() {
     const SCR_W: f32 = 20.0;
     const SCR_H: f32 = 20.0;
 
+    const mut mq::BLACK: mq::Color = mq::Color::new(0., 0., 0., 1.);
+    const mut mq::DARKBLUE: mq::Color = mq::Color::new(0., 0., 0.5, 1.);
+    const mut mq::DARKPURPLE: mq::Color = mq::Color::new(0.5, 0., 0.5, 1.);
+
     let mut blocks: [[bool; BLOCKS_W]; BLOCKS_H] = [[true; BLOCKS_W]; BLOCKS_H];
     let mut ball_x = 12.;
     let mut ball_y = 7.;
