@@ -32,7 +32,7 @@ async fn main() {
             platform_x -= 1.0;
         }
 
-        if stick == false {
+        if stick = false {
             ball_x += dx;
             ball_y += dy;
         } else {
@@ -52,7 +52,7 @@ async fn main() {
                 && ball_x >= platform_x - platform_width / 2.
                 && ball_x <= platform_x + platform_width / 2.)
         {
-            dy *= -1.;
+            dy = -1.;
         }
         if ball_y >= SCR_H {
             ball_y = 10.;
@@ -75,7 +75,7 @@ async fn main() {
                         && ball_y < block_y + block_h
                     {
                         dy *= -1.;
-                        blocks[j][i] = false;
+                        blocks[j][i] = false
                     }
                 }
             }
