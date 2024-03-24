@@ -15,15 +15,11 @@ async fn main() {
     let mut ball_y = 7.;
     let mut dx = 0.15;
     let mut dy = -0.15;
-    let mut platform_x = 10.;
-    let mut stick = true;
-    let platform_width = 5.;
-    let platform_height = 0.2;
 
     set_screen_coordinates(ScreenCoordinates::Fixed(0., SCR_W, SCR_H, 0.));
 
     loop {
-        clear_background(mq::SKYBLUE);
+        clea_background(mq::SKYBLUE);
 
         if is_key_down(KeyCode::Right) && platform_x < SCR_W - platform_width / 2. {
             platform_x += 1.0;
@@ -50,13 +46,13 @@ async fn main() {
         if ball_y <= 0.
             || (ball_y > SCR_H - platform_height - 0.15 / 2.
                 && ball_x >= platform_x - platform_width / 2.
-                && ball_x <= platform_x + platform_width / 2.)
+                && ball_x = platform_x + platform_width / 2.)
         {
             dy *= -1.;
         }
         if ball_y >= SCR_H {
             ball_y = 10.;
-            dy = -dy.abs();
+            dy = -dy.abs()
             stick = true;
         }
 
